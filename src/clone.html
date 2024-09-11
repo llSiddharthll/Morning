@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .card::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .custom-shadow {
+        box-shadow: 0 5px 25px black;
+    }
+</style>
+
+<body class="select-none">
+    <section class="h-screen bg-black text-white">
+        <div class="upper h-[10%] p-2 px-6 hidden md:flex w-full">
+            <div class="flex justify-between items-center w-full">
+                <div><img src="spotify.svg" alt="" class="h-10 w-10" /></div>
+
+                <div class="flex items-center gap-2 ml-32">
+                    <div class="bg-[#ffffff20] p-3 rounded-full">
+                        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
+                            class="Svg-sc-ytk21e-0 bneLcE h-6 w-6">
+                            <path fill="white"
+                                d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="relative flex">
+                        <input type="text"
+                            class="bg-[#ffffff20] w-[30rem] p-3 ps-10 rounded-full placeholder-[#ffffff90] placeholder:font-semibold"
+                            placeholder="What do you want to play?" />
+                        <span class="absolute right-2 top-3">
+                            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
+                                class="Svg-sc-ytk21e-0 bneLcE h-6 w-6">
+                                <path fill="white"
+                                    d="M4 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4H4V2zM1.513 9.37A1 1 0 0 1 2.291 9H21.71a1 1 0 0 1 .978 1.208l-2.17 10.208A2 2 0 0 1 18.562 22H5.438a2 2 0 0 1-1.956-1.584l-2.17-10.208a1 1 0 0 1 .201-.837zM12 17.834c1.933 0 3.5-1.044 3.5-2.333 0-1.289-1.567-2.333-3.5-2.333S8.5 14.21 8.5 15.5c0 1.289 1.567 2.333 3.5 2.333z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="absolute right-12 top-3 w-[1px] bg-gray-300 h-5"></span>
+                        <span class="absolute left-2 top-4"><img src="search.svg" alt="" class="h-5 w-5" /></span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <button class="font-bold">Sign up</button>
+                    <button class="bg-white text-black px-8 py-3 font-bold rounded-full">
+                        Log in
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="text-white flex md:hidden">Mynavbar</div>
+        <div class="middle h-[78.5%] flex gap-2 mx-2">
+            <div class="left h-full w-[23.5%] bg-[#ffffff12] p-2 rounded-lg hidden md:flex flex-col">
+                <div class="flex justify-between items-center px-4 mb-6">
+                    <div class="flex gap-2">
+                        <span><svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
+                                class="Svg-sc-ytk21e-0 bneLcE h-6 w-6">
+                                <path fill="#ffffff90"
+                                    d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z">
+                                </path>
+                            </svg></span>
+                        <span class="text-md font-bold text-[#ffffff90]">Your Library</span>
+                    </div>
+                    <div class="text-3xl text-[#ffffff90]">+</div>
+                </div>
+                <div class="flex flex-col gap-6 h-72 overflow-x-auto py-4 card">
+                    <div class="flex flex-col gap-6 bg-[#ffffff12] p-4 rounded-lg">
+                        <div class="flex flex-col gap-2">
+                            <span class="font-bold">Create your first playlist</span>
+                            <span class="font-bold text-sm ">It's easy we'll help you</span>
+                        </div>
+                        <div class="bg-white text-black font-bold text-sm rounded-full py-1 px-2 w-28">Create playlist
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6 bg-[#ffffff12] p-4 rounded-lg">
+                        <div class="flex flex-col gap-2">
+                            <span class="font-bold">Create your first playlist</span>
+                            <span class="font-bold text-sm ">It's easy we'll help you</span>
+                        </div>
+                        <div class="bg-white text-black font-bold text-sm rounded-full py-1 px-2 w-28">Create playlist
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col py-8 gap-8 px-4 h-60">
+                    <div>
+                        <ul class="text-[#ffffff90] text-[11px] flex flex-row flex-wrap gap-4">
+                            <li class="pb-1">Legal</li>
+                            <li class="pb-1">Safety Center & Privacy Center</li>
+                            <li class="pb-1">Privacy Policy</li>
+                            <li class="pb-1">Cookies</li>
+                            <li class="pb-1">About Ads</li>
+                            <li class="pb-1">Accessibility</li>
+                        </ul>
+                        <span class="text-[13px] text-[#ffffff90]">Cookies</span>
+                    </div>
+                    <button
+                        class="flex gap-2 w-24 items-center border-[0.5px] border-[#ffffff80] rounded-full p-1 px-3">
+                        <span><svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
+                                class="Svg-sc-ytk21e-0 dYnaPI h-4 w-4">
+                                <path fill="#ffffff"
+                                    d="M8.152 16H8a8 8 0 1 1 .152 0zm-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296zM4.877 7.25c.062-1.771.34-3.386.773-4.624.099-.284.208-.554.329-.806a6.507 6.507 0 0 0-4.436 5.43h3.334zm-3.334 1.5a6.507 6.507 0 0 0 4.436 5.43 7.974 7.974 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624H1.543zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129H6.378zm5.048 0c-.061 1.771-.339 3.386-.772 4.624-.082.235-.171.46-.268.674a6.506 6.506 0 0 0 4.071-5.298h-3.03zm3.031-1.5a6.507 6.507 0 0 0-4.071-5.298c.097.214.186.44.268.674.433 1.238.711 2.853.772 4.624h3.031z">
+                                </path>
+                            </svg></span>
+                        <span class="font-bold text-sm">English</span>
+                    </button>
+                </div>
+            </div>
+            <div class="right h-full w-full md:w-[76.5%] bg-gradient-to-b from-[#ffffff30] from-10% to-[#ffffff12] rounded-lg">
+                <div class="py-4 mt-4">
+                    <div class="px-6 flex justify-between">
+                        <span class="font-bold text-2xl">Popular Artists</span>
+                        <span class="text-sm font-bold text-[#ffffff90]">Show all</span>
+                    </div>
+                    <ul class="flex flex-col md:flex-row py-4 px-2 overflow-x-scroll md:overflow-hidden card">
+                        <li class="p-4 pt-0 hover:bg-gradient-to-t from-[#ffffff10] group">
+                            <div class="relative">
+                                <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt=""
+                                    class="min-h-40 min-w-40 rounded-full custom-shadow object-cover">
+                                <button
+                                    class="absolute custom-shadow hidden group-hover:block bottom-2 right-0 bg-green-500 rounded-full text-black p-3 h-12 w-12"><i
+                                        class="fa-solid fa-play"></i></button>
+                            </div>
+                            <div class="flex flex-col py-2">
+                                <span class="text-md font-normal">Pritam</span>
+                                <span class="font-normal text-[#ffffff90]">Artist</span>
+                            </div>
+                        </li>
+                        <li class="p-4 pt-0 hover:bg-gradient-to-t from-[#ffffff10]">
+                            <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt=""
+                                class="min-h-40 min-w-40 rounded-full custom-shadow object-cover">
+                            <div class="flex flex-col py-2">
+                                <span class="text-md font-normal">Pritam</span>
+                                <span class="font-normal text-[#ffffff90]">Artist</span>
+                            </div>
+                        </li>
+                        <li class="p-4 pt-0 hover:bg-gradient-to-t from-[#ffffff10]">
+                            <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt=""
+                                class="min-h-40 min-w-40 rounded-full custom-shadow object-cover">
+                            <div class="flex flex-col py-2">
+                                <span class="text-md font-normal">Pritam</span>
+                                <span class="font-normal text-[#ffffff90]">Artist</span>
+                            </div>
+                        </li>
+                        <li class="p-4 pt-0 hover:bg-gradient-to-t from-[#ffffff10]">
+                            <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt=""
+                                class="min-h-40 min-w-40 rounded-full custom-shadow object-cover">
+                            <div class="flex flex-col py-2">
+                                <span class="text-md font-normal">Pritam</span>
+                                <span class="font-normal text-[#ffffff90]">Artist</span>
+                            </div>
+                        </li>
+                        <li class="p-4 pt-0 hover:bg-gradient-to-t from-[#ffffff10]">
+                            <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt=""
+                                class="min-h-40 min-w-40 rounded-full custom-shadow object-cover">
+                            <div class="flex flex-col py-2">
+                                <span class="text-md font-normal">Pritam</span>
+                                <span class="font-normal text-[#ffffff90]">Artist</span>
+                            </div>
+                        </li>
+                        <li class="p-4 pt-0 hover:bg-gradient-to-t from-[#ffffff10]">
+                            <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt=""
+                                class="min-h-40 min-w-40 rounded-full custom-shadow object-cover">
+                            <div class="flex flex-col py-2">
+                                <span class="text-md font-normal">Pritam</span>
+                                <span class="font-normal text-[#ffffff90]">Artist</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="lower h-[11.5%] w-full p-2 hidden md:flex">
+            <div class="bg-gradient-to-r from-pink-500 to-sky-500 h-full w-full flex justify-between items-center px-5">
+                <div>
+                    <h4 class="text-sm font-bold">Preview of Spotify</h4>
+                    <p class="text-[15px] font-semibold">Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+                </div>
+                <div><button class="bg-white text-black px-5 py-2 font-bold text-md rounded-full">Sign up free</button></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
